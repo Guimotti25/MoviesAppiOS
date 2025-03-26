@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-mJ-kl8" customClass="CelulaFilmes" customModule="moviesapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sa9-mw-G1y">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vy0-xv-cWy">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagem" translatesAutoresizingMaskIntoConstraints="NO" id="132-Rs-iKO">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4r-oa-T3O" userLabel="View Sombra">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter e a pedra filosofal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0Y-AE-yhi">
+                                <rect key="frame" x="0.0" y="131.66666666666666" width="140" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="1zQ-w3-2bL"/>
+                            <constraint firstAttribute="trailing" secondItem="r4r-oa-T3O" secondAttribute="trailing" id="5hC-zh-iT6"/>
+                            <constraint firstAttribute="bottom" secondItem="r4r-oa-T3O" secondAttribute="bottom" id="JFN-Ll-uCL"/>
+                            <constraint firstAttribute="bottom" secondItem="e0Y-AE-yhi" secondAttribute="bottom" id="Mji-NH-EU1"/>
+                            <constraint firstItem="r4r-oa-T3O" firstAttribute="leading" secondItem="Vy0-xv-cWy" secondAttribute="leading" id="QeK-tM-dgX"/>
+                            <constraint firstItem="e0Y-AE-yhi" firstAttribute="leading" secondItem="Vy0-xv-cWy" secondAttribute="leading" id="TD3-1Z-zKM"/>
+                            <constraint firstAttribute="trailing" secondItem="132-Rs-iKO" secondAttribute="trailing" id="W4b-yY-Ifz"/>
+                            <constraint firstItem="132-Rs-iKO" firstAttribute="leading" secondItem="Vy0-xv-cWy" secondAttribute="leading" id="dXJ-1K-PSc"/>
+                            <constraint firstAttribute="trailing" secondItem="e0Y-AE-yhi" secondAttribute="trailing" id="dtV-0a-bYr"/>
+                            <constraint firstItem="132-Rs-iKO" firstAttribute="top" secondItem="Vy0-xv-cWy" secondAttribute="top" id="eN0-LI-QDj"/>
+                            <constraint firstItem="r4r-oa-T3O" firstAttribute="top" secondItem="Vy0-xv-cWy" secondAttribute="top" id="lEZ-BG-z7T"/>
+                            <constraint firstAttribute="width" constant="140" id="rA1-6k-Cve"/>
+                            <constraint firstAttribute="bottom" secondItem="132-Rs-iKO" secondAttribute="bottom" id="xTc-cN-LJK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Vy0-xv-cWy" secondAttribute="trailing" id="0uy-kP-I79"/>
+                    <constraint firstItem="Vy0-xv-cWy" firstAttribute="top" secondItem="sa9-mw-G1y" secondAttribute="top" id="BOG-OQ-dPb"/>
+                    <constraint firstAttribute="bottom" secondItem="Vy0-xv-cWy" secondAttribute="bottom" id="Cxc-m8-yvy"/>
+                    <constraint firstItem="Vy0-xv-cWy" firstAttribute="leading" secondItem="sa9-mw-G1y" secondAttribute="leading" id="ZQm-zT-jNv"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="imagemFilme" destination="132-Rs-iKO" id="mCY-As-y0h"/>
+                <outlet property="labelNomeFilme" destination="e0Y-AE-yhi" id="Cri-fu-gza"/>
+                <outlet property="viewCelula" destination="Vy0-xv-cWy" id="DR4-KC-UBZ"/>
+                <outlet property="viewSombra" destination="r4r-oa-T3O" id="vIi-fO-0F2"/>
+            </connections>
+            <point key="canvasLocation" x="-61.068702290076331" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="imagem" width="337" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
