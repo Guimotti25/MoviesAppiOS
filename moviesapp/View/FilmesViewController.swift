@@ -27,6 +27,8 @@ class FilmesViewController: UIViewController
     
     private func configurarLayout()
     {
+        self.title = "Movies App"
+        
         self.configurarCollections()
         self.obterListaFilmesPopulares()
         self.obterListaFilmesNovos()
@@ -147,14 +149,23 @@ extension FilmesViewController: UICollectionViewDelegate, UICollectionViewDataSo
      
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {
-        let filme =  self.listaFilmesPopulares[indexPath.row]
-        //Converte a DescricaoTipoModulo para o Enum usado no Controlador
-//        let vc = Controlador.Modulo.Associado.detalhesPlanoVC()
-//        vc.listaProdutosPlano = self.listaProdutosPlano
-//        vc.veiculo = self.veiculo
-//        self.navigationController?.pushViewController(vc, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Método mais direto para teste
+        let filme = listaFilmesPopulares[indexPath.row]
+        
+        if let detalhesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetalhesFilmeViewController") as? DetalhesFilmeViewController {
+            detalhesVC.filme = filme
+            
+            // Tenta navigation, se falhar usa present
+            self.navigationController?.pushViewController(detalhesVC, animated: true)
+           
+        } else {
+            print("Falha crítica: Não foi possível criar DetalhesFilmesViewController")
+            // Mostra alerta para o usuário
+            let alert = UIAlertController(title: "Erro", message: "Não foi possível carregar os detalhes", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
     }
     
 }
