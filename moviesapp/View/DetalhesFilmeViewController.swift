@@ -30,8 +30,9 @@ class DetalhesFilmeViewController: UIViewController
     
     private func configurarLayout()
     {
+        //Condifigura os dados
         self.viewInfosAdicionais.setarRaioCima(radius: 16)
-        self.viewSinopseFilme.setarRaio(radius: 12)
+        self.viewSinopseFilme.setarRaio(radius: 11)
         
         self.tituloFilme.text = self.filme?.originalTitle
         self.descricaoFilme.text = self.filme?.overview
